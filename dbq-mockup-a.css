@@ -1,25 +1,20 @@
-/* dbq-mockup-a.css — "Clinical" variation
- * Sterile trust. Like a real medical practice website.
- * Same layout as B (two-column hero, photo, message) but muted, airy, clean. */
+/* dbq-mockup-a.css — Variation A: "Softer"
+ * Close to B but lighter touch. More whitespace, slightly muted.
+ * The difference: B is warm, A is cool/clean. Same layout. */
 
-/* ── Muted palette ── */
+/* ── Slightly cooler palette ── */
 @layer cup-override {
   :root,
   :root[data-theme="light"] {
-    --dbq-color-hero-bg:      #f7faf8;
-    --dbq-color-hero-text:    #1b4332;
-    --dbq-color-trust-bg:     #ffffff;
-    --cup-color-border:       #e8ebe9;
-    --cup-color-surface-alt:  #fafbfa;
+    --dbq-color-trust-bg:     #f8faf9;
+    --cup-color-border:       #e2e7e4;
   }
 }
 
-/* ── Hero: light, airy, two-column ── */
+/* ── Hero: same two-column, slightly lighter gradient ── */
 .dbq-hero {
-  background: var(--dbq-color-hero-bg);
-  color: var(--dbq-color-hero-text);
-  padding: 4rem 2rem 3.5rem;
-  border-bottom: 1px solid var(--cup-color-border);
+  background: linear-gradient(135deg, #1e4d38 0%, #2d6a4f 100%);
+  padding: 3.5rem 2rem;
   text-align: left;
 }
 .dbq-hero__inner {
@@ -30,249 +25,97 @@
   align-items: center;
 }
 .dbq-hero h1 {
-  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-  letter-spacing: -0.01em;
-  font-weight: 700;
   text-align: left;
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 .dbq-hero__subtitle {
-  opacity: 0.65;
-  font-size: 1rem;
-  max-width: 500px;
   text-align: left;
+  font-size: 1rem;
+  opacity: 0.85;
 }
 .dbq-hero__actions {
   justify-content: flex-start;
 }
 
-/* ── Hero photo: clean, rounded ── */
+/* ── Photo + Quote: softer frame ── */
+.dbq-hero__person {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
 .dbq-hero__photo {
   width: 100%;
   aspect-ratio: 4/5;
-  border-radius: 8px;
+  max-height: 380px;
+  border-radius: 16px;
   overflow: hidden;
-  border: 1px solid var(--cup-color-border);
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
 }
 .dbq-hero__photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: grayscale(15%);
+}
+.dbq-hero__quote {
+  text-align: center;
+  padding: 0 0.5rem;
+}
+.dbq-hero__quote-text {
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 0.75rem;
+}
+.dbq-hero__quote-author {
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.dbq-hero__quote-title {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.03em;
 }
 
-/* ── Buttons: subtler on light hero ── */
+/* ── Buttons: cleaner ── */
 .dbq-hero .dbq-btn--primary {
-  background: #2d6a4f;
-  color: #fff;
   border-radius: 6px;
   font-size: 0.9rem;
-  padding: 0.6rem 1.5rem;
-}
-.dbq-hero .dbq-btn--primary:hover {
-  background: #245a42;
-}
-.dbq-hero .dbq-btn--secondary {
-  color: #2d6a4f;
-  border-color: #2d6a4f;
-}
-.dbq-hero .dbq-btn--secondary:hover {
-  background: rgba(45,106,79,0.06);
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
 }
 
-/* ── Trust bar: ultra-minimal thin line ── */
+/* ── Trust bar ── */
 .dbq-trust {
-  background: #fff;
-  border-bottom: 1px solid var(--cup-color-border);
-  padding: 0.75rem 2rem;
+  background: #f8faf9;
+  padding: 0.85rem 2rem;
 }
 .dbq-trust__item {
-  font-size: 0.75rem;
-  color: #888;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 500;
-}
-.dbq-trust__item svg {
-  width: 14px;
-  height: 14px;
-  opacity: 0.5;
+  font-size: 0.78rem;
 }
 
-/* ── Sections: more breathing room ── */
+/* ── Sections: slightly more space ── */
 .dbq-section {
-  padding: 4.5rem 2rem;
-}
-.dbq-section__header {
-  margin-bottom: 3rem;
+  padding: 4rem 2rem;
 }
 .dbq-section__header h2 {
-  font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
-  color: #2c3e2e;
-}
-.dbq-section__header p {
-  color: #999;
-  font-size: 0.95rem;
 }
 
-/* ── Cards: bordered, thin left accent, no shadow ── */
+/* ── Cards: softer corners ── */
 .dbq-card {
-  border: 1px solid var(--cup-color-border);
-  border-left: 3px solid #2d6a4f;
-  border-radius: 4px;
-  text-align: left;
-  padding: 2rem;
-}
-.dbq-card:hover {
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-}
-.dbq-card__icon {
-  margin: 0 0 1rem 0;
-  width: 36px;
-  height: 36px;
-  opacity: 0.6;
-}
-.dbq-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
-}
-.dbq-card p {
-  font-size: 0.85rem;
-  line-height: 1.7;
-  color: #777;
+  border-radius: 12px;
 }
 
-/* ── Steps: smaller circles, more space ── */
+/* ── Steps: lighter number circles ── */
 .dbq-step__number {
-  width: 36px;
-  height: 36px;
-  font-size: 0.9rem;
   background: #e8f0ec;
   color: #2d6a4f;
-}
-.dbq-step h3 {
-  font-size: 0.95rem;
-  color: #2c3e2e;
-}
-.dbq-step p {
-  font-size: 0.85rem;
-  color: #888;
-}
-
-/* ── Bio: clean, centered, understated ── */
-.dbq-bio__photo {
-  width: 80px;
-  height: 80px;
-  background: #f0f3f1;
-  border: 2px solid var(--cup-color-border);
-}
-.dbq-bio h3 {
-  font-size: 1rem;
-  font-weight: 600;
-}
-.dbq-bio__title {
-  font-size: 0.8rem;
-  color: #999;
-}
-.dbq-bio p:last-child {
-  font-size: 0.85rem;
-  color: #888;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-/* ── CTA: muted, not shouty ── */
-.dbq-cta {
-  background: #2c3e2e;
-  padding: 3rem 2rem;
-}
-.dbq-cta h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-.dbq-cta p {
-  font-size: 0.9rem;
-  opacity: 0.7;
-}
-
-/* ── Footer: light gray instead of dark ── */
-.dbq-footer {
-  background: #f5f6f5;
-  color: #666;
-}
-.dbq-footer h3 {
-  color: #2c3e2e;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.dbq-footer a {
-  color: #777;
-}
-.dbq-footer a:hover {
-  color: #2d6a4f;
-}
-.dbq-footer__bottom {
-  border-top: 1px solid #e0e2e0;
-  color: #aaa;
-}
-.dbq-footer__contact-item {
-  color: #777;
-}
-.dbq-footer__contact-item a {
-  color: #2d6a4f;
-  font-weight: 500;
-  font-size: 0.85rem;
-}
-
-/* ── Header: thinner ── */
-.dbq-header {
-  border-bottom: 1px solid #eee;
-}
-.dbq-header__inner {
-  padding: 0.6rem 2rem;
-}
-.dbq-header__logo img {
-  height: 52px;
-}
-
-/* ── Personal message: clinical version — clean, thin border ── */
-.dbq-message {
-  background: #fff;
-  padding: 3rem 2rem;
-  border-top: 1px solid var(--cup-color-border);
-  border-bottom: 1px solid var(--cup-color-border);
-}
-.dbq-message__inner {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-}
-.dbq-message__quote {
-  font-size: 1rem;
-  font-style: italic;
-  line-height: 1.8;
-  color: #666;
-  margin-bottom: 1.5rem;
-}
-.dbq-message__quote::before {
-  content: '\201C';
-  font-size: 2.5rem;
-  color: #ccc;
-  display: block;
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-.dbq-message__author {
-  font-weight: 600;
-  color: #2c3e2e;
-  font-size: 0.9rem;
-}
-.dbq-message__title {
-  font-size: 0.8rem;
-  color: #999;
 }
 
 /* ── Mobile ── */
@@ -289,8 +132,11 @@
     justify-content: center;
   }
   .dbq-hero__photo {
-    max-width: 260px;
+    max-width: 240px;
     margin: 0 auto;
     aspect-ratio: 1;
+  }
+  .dbq-hero__person {
+    order: -1;
   }
 }
