@@ -1,0 +1,212 @@
+/* dbq-mockup-a.css — "Clinical" override
+ * Sterile trust. Like a real medical practice website.
+ * More whitespace, muted hero, lighter everything, sparse and clean. */
+
+/* ── Muted palette ── */
+@layer cup-override {
+  :root,
+  :root[data-theme="light"] {
+    --dbq-color-hero-bg:      #f7faf8;
+    --dbq-color-hero-text:    #1b4332;
+    --dbq-color-trust-bg:     #ffffff;
+    --cup-color-border:       #e8ebe9;
+    --cup-color-surface-alt:  #fafbfa;
+  }
+}
+
+/* ── Hero: light background, text-driven, no gradient ── */
+.dbq-hero {
+  background: var(--dbq-color-hero-bg);
+  color: var(--dbq-color-hero-text);
+  padding: 5rem 2rem 4rem;
+  border-bottom: 1px solid var(--cup-color-border);
+}
+.dbq-hero h1 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+.dbq-hero__subtitle {
+  opacity: 0.7;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Buttons: subtler on light hero ── */
+.dbq-hero .dbq-btn--primary {
+  background: #2d6a4f;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.5rem;
+}
+.dbq-hero .dbq-btn--primary:hover {
+  background: #245a42;
+}
+.dbq-hero .dbq-btn--secondary {
+  color: #2d6a4f;
+  border-color: #2d6a4f;
+}
+.dbq-hero .dbq-btn--secondary:hover {
+  background: rgba(45,106,79,0.06);
+}
+
+/* ── Trust bar: ultra-minimal thin line ── */
+.dbq-trust {
+  background: #fff;
+  border-bottom: 1px solid var(--cup-color-border);
+  padding: 0.75rem 2rem;
+}
+.dbq-trust__item {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+.dbq-trust__item svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.5;
+}
+
+/* ── Sections: more breathing room ── */
+.dbq-section {
+  padding: 4.5rem 2rem;
+}
+.dbq-section__header {
+  margin-bottom: 3rem;
+}
+.dbq-section__header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #2c3e2e;
+}
+.dbq-section__header p {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* ── Cards: bordered, thin left accent, no shadow ── */
+.dbq-card {
+  border: 1px solid var(--cup-color-border);
+  border-left: 3px solid #2d6a4f;
+  border-radius: 4px;
+  text-align: left;
+  padding: 2rem;
+}
+.dbq-card:hover {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.dbq-card__icon {
+  margin: 0 0 1rem 0;
+  width: 36px;
+  height: 36px;
+  opacity: 0.6;
+}
+.dbq-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.dbq-card p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #777;
+}
+
+/* ── Steps: smaller circles, more space ── */
+.dbq-step__number {
+  width: 36px;
+  height: 36px;
+  font-size: 0.9rem;
+  background: #e8f0ec;
+  color: #2d6a4f;
+}
+.dbq-step h3 {
+  font-size: 0.95rem;
+  color: #2c3e2e;
+}
+.dbq-step p {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* ── Bio: clean, centered, understated ── */
+.dbq-bio__photo {
+  width: 80px;
+  height: 80px;
+  background: #f0f3f1;
+  border: 2px solid var(--cup-color-border);
+}
+.dbq-bio h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.dbq-bio__title {
+  font-size: 0.8rem;
+  color: #999;
+}
+.dbq-bio p:last-child {
+  font-size: 0.85rem;
+  color: #888;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ── CTA: muted, not shouty ── */
+.dbq-cta {
+  background: #2c3e2e;
+  padding: 3rem 2rem;
+}
+.dbq-cta h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.dbq-cta p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ── Footer: light gray instead of dark ── */
+.dbq-footer {
+  background: #f5f6f5;
+  color: #666;
+}
+.dbq-footer h3 {
+  color: #2c3e2e;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.dbq-footer a {
+  color: #777;
+}
+.dbq-footer a:hover {
+  color: #2d6a4f;
+}
+.dbq-footer__bottom {
+  border-top: 1px solid #e0e2e0;
+  color: #aaa;
+}
+.dbq-footer__contact-item {
+  color: #777;
+}
+.dbq-footer__contact-item a {
+  color: #2d6a4f;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* ── Header: thinner ── */
+.dbq-header {
+  border-bottom: 1px solid #eee;
+}
+.dbq-header__inner {
+  padding: 0.6rem 2rem;
+}
+.dbq-header__logo img {
+  height: 52px;
+}
