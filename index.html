@@ -28,10 +28,9 @@
 </head>
 <body>
 
-  <!-- Skip Link -->
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
+  <!-- Header: white, thin border -->
   <header class="site-header">
     <div class="site-header__inner container">
       <a href="index.html" class="site-header__logo" aria-label="DBQ Help Home">
@@ -44,39 +43,57 @@
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <a href="tel:+13105718904" class="site-header__phone">
-        <span class="phone-icon">📞</span>
-        310-571-8904
-      </a>
+      <a href="tel:+13105718904" class="site-header__phone">📞 310-571-8904</a>
     </div>
   </header>
 
-  <!-- Main -->
   <main id="main">
 
-    <!-- Hero: Light, clean, calm -->
+    <!-- HERO A: Split layout — text LEFT, Dr. Greene photo RIGHT -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero__inner container">
         <div class="hero__content">
-          <h1 id="hero-heading">We help veterans get the documentation their VA claim needs.</h1>
-          <p class="hero__sub">Licensed examiners and former VA raters serving California veterans.</p>
-          <a href="tel:+13105718904" class="btn btn--primary">Call 310-571-8904</a>
-          <p class="hero__alt-action">or <a href="contact.html">schedule online</a></p>
+          <p class="hero__eyebrow">California Veteran Disability Evaluations</p>
+          <h1 id="hero-heading">Get the documentation your VA claim needs.</h1>
+          <p class="hero__sub">Licensed medical examiners — including former VA raters — conducting thorough DBQ evaluations and nexus letters for veterans across California.</p>
+          <div class="hero__actions">
+            <a href="tel:+13105718904" class="btn btn--primary">Call 310-571-8904</a>
+            <a href="contact.html" class="btn btn--outline">Schedule Online</a>
+          </div>
+        </div>
+        <div class="hero__person">
+          <div class="hero__photo">
+            <img src="img/dr-greene.png" alt="Dr. Eric Greene, PsyD" width="436" height="436">
+          </div>
+          <p class="hero__name">Dr. Eric Greene, PsyD</p>
+          <p class="hero__title">CEO &amp; Licensed Psychologist</p>
         </div>
       </div>
     </section>
 
-    <!-- Trust Bar -->
-    <section class="trust-bar" aria-label="Credentials">
-      <div class="trust-bar__inner container">
-        <div class="trust-bar__item">✓ Licensed Medical Examiners</div>
-        <div class="trust-bar__item">✓ Former VA Raters on Staff</div>
-        <div class="trust-bar__item">✓ Serving California Veterans</div>
-        <div class="trust-bar__item">✓ Mon–Fri 9am–5pm PST</div>
+    <!-- UNIQUE TO A: Stats bar with numbers -->
+    <section class="stats-bar" aria-label="Key facts">
+      <div class="stats-bar__inner container">
+        <div class="stats-bar__item">
+          <span class="stats-bar__number">500+</span>
+          <span class="stats-bar__label">Evaluations Completed</span>
+        </div>
+        <div class="stats-bar__item">
+          <span class="stats-bar__number">100%</span>
+          <span class="stats-bar__label">Licensed Examiners</span>
+        </div>
+        <div class="stats-bar__item">
+          <span class="stats-bar__number">Former VA</span>
+          <span class="stats-bar__label">Raters on Staff</span>
+        </div>
+        <div class="stats-bar__item">
+          <span class="stats-bar__number">Statewide</span>
+          <span class="stats-bar__label">California Service</span>
+        </div>
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- Services: cards with emoji icons -->
     <section class="section" aria-labelledby="services-heading">
       <div class="container">
         <div class="section__header">
@@ -85,14 +102,17 @@
         </div>
         <div class="card-grid">
           <div class="card">
+            <div class="card__icon">📋</div>
             <h3>DBQ Evaluations</h3>
             <p>Thorough Disability Benefits Questionnaire evaluations conducted by licensed medical examiners. We document your condition accurately for your VA claim.</p>
           </div>
           <div class="card">
+            <div class="card__icon">🔗</div>
             <h3>Nexus Letters</h3>
             <p>Professional nexus letters establishing the connection between your military service and current medical conditions. Critical evidence for your claim.</p>
           </div>
           <div class="card">
+            <div class="card__icon">🤝</div>
             <h3>Veteran Guidance</h3>
             <p>Personalized support navigating the VA disability claims process. We help you understand what to expect and prepare for every step.</p>
           </div>
@@ -100,48 +120,41 @@
       </div>
     </section>
 
-    <!-- Process -->
+    <!-- Process: horizontal with arrows -->
     <section class="section section--alt" aria-labelledby="process-heading">
       <div class="container">
         <div class="section__header">
           <h2 id="process-heading">Three Simple Steps</h2>
-          <p>Getting your evaluation is straightforward.</p>
         </div>
         <div class="steps">
           <div class="step">
             <div class="step__num">1</div>
             <h3>Contact Us</h3>
-            <p>Call 310-571-8904 or fill out our contact form. We'll discuss your needs and schedule your evaluation.</p>
+            <p>Call or fill out our form.</p>
           </div>
+          <div class="step__arrow" aria-hidden="true">→</div>
           <div class="step">
             <div class="step__num">2</div>
             <h3>Get Evaluated</h3>
-            <p>A licensed medical examiner conducts a thorough, compassionate evaluation and reviews your records.</p>
+            <p>Thorough, compassionate exam.</p>
           </div>
+          <div class="step__arrow" aria-hidden="true">→</div>
           <div class="step">
             <div class="step__num">3</div>
             <h3>Receive Your DBQ</h3>
-            <p>We complete your Disability Benefits Questionnaire with all necessary documentation for your VA claim.</p>
+            <p>Complete documentation for VA.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Quote -->
+    <!-- Inline quote — small, elegant, NO photo -->
     <section class="quote-section" aria-label="Message from Dr. Greene">
       <div class="container">
-        <div class="quote-section__inner">
-          <div class="quote-section__photo">
-            <img src="img/dr-greene.png" alt="Dr. Eric Greene, PsyD" width="436" height="436">
-          </div>
-          <blockquote class="quote-block">
-            <p>"Every veteran who served this country deserves to have their service-connected conditions properly documented. We know exactly what the VA needs to see because we used to be the ones reviewing these claims."</p>
-            <footer>
-              <strong>Dr. Eric Greene, PsyD</strong>
-              <span>CEO & Licensed Psychologist</span>
-            </footer>
-          </blockquote>
-        </div>
+        <blockquote class="quote-block">
+          <p>"We know exactly what the VA needs to see — because we used to be the ones reviewing these claims."</p>
+          <footer>— Dr. Eric Greene, PsyD</footer>
+        </blockquote>
       </div>
     </section>
 
@@ -150,7 +163,7 @@
       <div class="container">
         <div class="section__header">
           <h2 id="team-heading">Built by VA Professionals</h2>
-          <p>Former VA Raters & Licensed Medical Examiners</p>
+          <p>Former VA Raters &amp; Licensed Medical Examiners</p>
         </div>
         <div class="team-note">
           <p><strong>DBQ Help only hires former VA Raters and other VA professionals.</strong> The M21-1 Procedure Manual for Rating is updated every Friday and our team of experts always ensures you're getting the most up-to-date information.</p>
@@ -166,21 +179,18 @@
         <p>We're here to help you get the benefits you've earned.</p>
         <div class="cta__actions">
           <a href="tel:+13105718904" class="btn btn--white">Call 310-571-8904</a>
-          <a href="mailto:info@dbqhelp.com" class="btn btn--outline-white">Email Us</a>
-          <a href="contact.html" class="btn btn--outline-white">Contact Form</a>
+          <a href="contact.html" class="btn btn--outline-white">Schedule Online</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="site-footer__inner container">
       <div class="site-footer__col">
         <h3>DBQ Help</h3>
         <p>Veteran disability evaluations by former VA professionals.</p>
-        <p>Empowering veterans to secure the disability benefits they've earned through service.</p>
       </div>
       <div class="site-footer__col">
         <h3>Quick Links</h3>
@@ -197,13 +207,9 @@
         <p>Mon–Fri, 9am–5pm PST</p>
       </div>
     </div>
-    <div class="site-footer__bottom">
-      <p>&copy; 2026 DBQ Help. All rights reserved.</p>
-    </div>
+    <div class="site-footer__bottom"><p>&copy; 2026 DBQ Help. All rights reserved.</p></div>
   </footer>
-
   <script src="dbq-app.js"></script>
-  <!-- GA4 placeholder -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-XXXXXXXXXX")</script>
 </body>
